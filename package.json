@@ -1,0 +1,39 @@
+{
+  "name": "budget-tracker",
+  "version": "1.0.0",
+  "description": "sample budget tracker API",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "prettify": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "precommit": "npm run prettify && npm run lint",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RICHYDOS/budget-Tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RICHYDOS/budget-Tracker/issues"
+  },
+  "homepage": "https://github.com/RICHYDOS/budget-Tracker#readme",
+  "dependencies": {
+    "@types/jest": "^29.5.5",
+    "ts-jest": "^29.1.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "eslint": "^8.49.0",
+    "eslint-config-standard-with-typescript": "^39.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  }
+}
