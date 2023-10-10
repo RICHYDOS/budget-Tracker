@@ -25,6 +25,11 @@
   "homepage": "https://github.com/RICHYDOS/budget-Tracker#readme",
   "dependencies": {
     "@types/jest": "^29.5.5",
+    "@types/sequelize": "^4.28.15",
+    "dotenv": "^16.3.1",
+    "mysql2": "^3.6.1",
+    "sequelize": "^6.33.0",
+    "sequelize-cli": "^6.6.1",
     "ts-jest": "^29.1.1"
   },
   "devDependencies": {
