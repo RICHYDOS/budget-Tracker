@@ -17,10 +17,10 @@ export class Transaction
   >
   implements TransactionAttributes {
   declare id: CreationOptional<number>
-  declare account_id: CreationOptional<number>
-  declare transaction_type: 'income' | 'expense' | 'transfer'
+  declare account_id: number
+  declare transaction_type: TransactionAttributes['transaction_type']
   declare amount: number
-  declare tag_id: CreationOptional<number>
+  declare tag_id: number
 }
 
 Transaction.init(
