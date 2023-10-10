@@ -1,16 +1,15 @@
-import dotenv from 'dotenv'
-dotenv.config()
+import 'dotenv/config'
 
 const databaseConfig = {
-  database: process.env.MYSQL_DB || 'foodies_haven',
-  username: process.env.MYSQL_USER || 'root',
-  password: process.env.MYSQL_PASS || 'password',
-  host: process.env.MYSQL_HOST || '127.0.0.1',
+  database: process.env.MYSQL_DB ?? 'budget_tracker',
+  username: process.env.MYSQL_USER ?? 'root',
+  password: process.env.MYSQL_PASS ?? 'password',
+  host: process.env.MYSQL_HOST ?? '127.0.0.1',
   dialect: 'mysql',
   dialectOptions: {
     bigNumberStrings: true
-    }
-};
+  }
+}
 
 module.exports = {
   development: {
@@ -26,4 +25,4 @@ module.exports = {
     ...databaseConfig,
     logging: false
   }
-};
+}
