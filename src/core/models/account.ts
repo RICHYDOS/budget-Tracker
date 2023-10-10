@@ -16,7 +16,7 @@ export class Account
   >
   implements AccountAttributes {
   declare id: CreationOptional<number>
-  declare user_id: CreationOptional<number>
+  declare user_id: number
   declare balance: number
 }
 
