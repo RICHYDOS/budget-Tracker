@@ -1,4 +1,11 @@
+import express, { type Express } from 'express'
 import { sequelize } from './core/database/sequelize'
+import { routes } from './core/routes'
+
+const app: Express = express()
+
+app.use(express.json())
+app.use('/', routes())
 
 sequelize
   .sync()
@@ -8,3 +15,12 @@ sequelize
   .catch((err) => {
     console.log(err)
   })
+
+const PORT = 3000 ?? process.env.PORT
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, () => {
+    console.log(`🟢 Server listening on port ${PORT}...`)
+  })
+}
+
+export default app
