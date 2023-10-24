@@ -17,7 +17,7 @@ sequelize
   })
 
 const PORT = 3000 ?? process.env.PORT
-if (process.env.NODE_ENV !== 'test') {
+if (process.env.ENVIRONMENT !== 'test') {
   app.listen(PORT, () => {
     console.log(`🟢 Server listening on port ${PORT}...`)
   })
